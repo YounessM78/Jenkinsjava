@@ -11,13 +11,13 @@ pipeline {
         stage('Build') {
             steps {
                 git branch: 'main', url: 'https://github.com/YounessM78/Jenkinsjava.git'
-                bat label : '', script :'javac main.java'
+                bat label : '', script :'C:\Program Files (x86)\Java\jre1.8.0_331\bin\javac.exe main.java'
                 
             }
         }
         stage ('run') {
             steps {
-             bat label : '', script :'java main'
+             bat label : '', script :'C:\Program Files (x86)\Java\jre1.8.0_331\bin\java.exe main'
             }
         }
       stage ('test') {
